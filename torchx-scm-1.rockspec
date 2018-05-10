@@ -2,8 +2,8 @@ package = "torchx"
 version = "scm-1"
 
 source = {
-   url = "git://github.com/nicholas-leonard/torchx",
-   tag = "master"
+   url = "git://github.com/elikosan/torchx",
+   tag = "2017-06-01"
 }
 
 description = {
@@ -11,7 +11,7 @@ description = {
    detailed = [[
    	    Experimental torch extensions
    ]],
-   homepage = "https://github.com/nicholas-leonard/torchx/blob/master/README.md"
+   homepage = "https://github.com/elikosan/torchx/blob/master/README.md"
 }
 
 dependencies = {
@@ -23,8 +23,6 @@ dependencies = {
 build = {
    type = "command",
    build_command = [[
-git submodule init
-git submodule update
 cmake -E make_directory build;
 cd build;
 cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$(LUA_BINDIR)/.." -DCMAKE_INSTALL_PREFIX="$(PREFIX)"; 
